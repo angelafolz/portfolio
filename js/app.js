@@ -21,29 +21,28 @@ $(document).ready(function(){
 	var arrowL = $("#projects .left");
 	var slider = $("#projects ul");
 	var sliderWidth;
-	var sliderNum;
+	var sliderStop;
 
 	function getSliderProperties() {
-		var windowWidth = $(window).width();
+		sliderWidth = slider.children().first().width() + parseInt(slider.children().first().css("margin-left"));
 
-		if (windowWidth < 640) {
-			sliderWidth = 0.765;
-			sliderNum = windowWidth * sliderWidth * (slider.children().length - 1);
+		if ($(window).width() >= 640) {
+			sliderWidth *= 3;
+			sliderStop = sliderWidth;
 		} else {
-			sliderWidth = 0.96;
-			sliderNum = windowWidth * sliderWidth;
+			sliderStop = sliderWidth * (slider.children().length - 1);
 		}
 	}
 
 	function moveSlider(direction) {
-		slider.animate({left: direction + (sliderWidth * 100) + "%"}, 1500);
+		slider.animate({left: direction + sliderWidth + "px"}, 1500);
 	}
 
 
 	arrowR.click(function() {
 		getSliderProperties();
 
-		if ( parseInt(slider.css("left")) > (-sliderNum + 10) ) {	// + 10 is to compensate for rounding errors
+		if ( parseInt(slider.css("left")) > (-sliderStop + 10) ) {	// + 10 is to compensate for rounding errors
 			moveSlider("-=");
 		}
 	});
