@@ -223,102 +223,106 @@ h1 {
   margin-bottom: 10px;
 }
 /* line 154, ../sass/styles.scss */
+#projects p {
+  margin-bottom: 1em;
+}
+/* line 158, ../sass/styles.scss */
 #projects .arrow {
   position: absolute;
   bottom: 3%;
   left: 50%;
   margin-left: -15px;
 }
-/* line 160, ../sass/styles.scss */
+/* line 164, ../sass/styles.scss */
 #projects .arrow span {
   display: inline-block;
 }
-/* line 165, ../sass/styles.scss */
+/* line 169, ../sass/styles.scss */
 #projects .left {
   width: 20px;
   height: 50px;
   background: url("../images/arrow-left.png") no-repeat 0 0;
 }
-/* line 171, ../sass/styles.scss */
+/* line 175, ../sass/styles.scss */
 #projects .right {
   width: 20px;
   height: 50px;
   background: url("../images/arrow-right.png") no-repeat 0 0;
 }
-/* line 177, ../sass/styles.scss */
+/* line 181, ../sass/styles.scss */
 #projects .left:hover, #projects .right:hover {
   background-position: -20px 0;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  /* line 184, ../sass/styles.scss */
+  /* line 188, ../sass/styles.scss */
   body {
     font-size: 15px;
     line-height: 18px;
   }
 
-  /* line 189, ../sass/styles.scss */
+  /* line 193, ../sass/styles.scss */
   #main, #about {
     height: 180px;
     padding: 110px 0;
   }
 
-  /* line 194, ../sass/styles.scss */
+  /* line 198, ../sass/styles.scss */
   #main .arrow {
     margin-right: 30px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 200, ../sass/styles.scss */
+  /* line 204, ../sass/styles.scss */
   body {
     font-size: 12px;
     line-height: 15px;
   }
 
-  /* line 205, ../sass/styles.scss */
+  /* line 209, ../sass/styles.scss */
   .mainShell {
     height: 370px;
   }
 
-  /* line 209, ../sass/styles.scss */
+  /* line 213, ../sass/styles.scss */
   #main, #about {
     height: 140px;
     padding: 90px 0;
   }
 
-  /* line 214, ../sass/styles.scss */
+  /* line 218, ../sass/styles.scss */
   #main .arrow {
     margin-right: 19px;
   }
 
-  /* line 218, ../sass/styles.scss */
+  /* line 222, ../sass/styles.scss */
   #projects {
     padding: 50px 0;
   }
 }
 @media screen and (max-width: 639px) {
-  /* line 225, ../sass/styles.scss */
+  /* line 229, ../sass/styles.scss */
   #main .title {
     float: none;
     width: 230px;
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 232, ../sass/styles.scss */
+  /* line 236, ../sass/styles.scss */
   #main ul {
     display: none;
   }
-  /* line 236, ../sass/styles.scss */
+  /* line 240, ../sass/styles.scss */
   #main .arrow {
     right: 50%;
     margin-right: -25px;
   }
 
-  /* line 243, ../sass/styles.scss */
+  /* line 247, ../sass/styles.scss */
   #projects ul {
     width: 500%;
   }
-  /* line 247, ../sass/styles.scss */
+  /* line 251, ../sass/styles.scss */
   #projects li {
     width: 10.5%;
     margin-left: 4.8%;

@@ -3,7 +3,7 @@ $(document).ready(function(){
 	/* show/hide nav and #main */
 
 	$(window).scroll(function() {
-		if($(window).scrollTop() >= 10) {
+		if($(window).scrollTop() >= 10) {	// 10 (instead of 0) is to decrease sensitivity
 			$("nav").fadeIn();
 			$("#main").fadeOut();
 		}
@@ -17,31 +17,45 @@ $(document).ready(function(){
 
 	/* project slider */
 
+	var arrowR = $("#projects .right");
+	var arrowL = $("#projects .left");
+	var slider = $("#projects ul");
 	var sliderWidth;
 	var sliderNum;
 
-	$("#projects").on("click", ".right", function(){
-		if ($(window).width() < 640) {
+	function getSliderProperties() {
+		var windowWidth = $(window).width();
+
+		if (windowWidth < 640) {
 			sliderWidth = 0.765;
-			sliderNum = $(window).width() * sliderWidth * 5;
+			sliderNum = windowWidth * sliderWidth * (slider.children().length - 1);
 		} else {
 			sliderWidth = 0.96;
-			sliderNum = $(window).width() * sliderWidth;
+			sliderNum = windowWidth * sliderWidth;
 		}
+	}
 
-		if ( parseInt($("#projects ul").css("left")) > (-parseInt(sliderNum)) ) {
-			$("#projects ul").animate({left: "-=" + (sliderWidth * 100) + "%"}, 1500);
+	function moveSlider(direction) {
+		slider.animate({left: direction + (sliderWidth * 100) + "%"}, 1500);
+	}
+
+
+	arrowR.click(function() {
+		getSliderProperties();
+
+		if ( parseInt(slider.css("left")) > (-sliderNum + 10) ) {	// + 10 is to compensate for rounding errors
+			moveSlider("-=");
 		}
 	});
 
-	$("#projects").on("click", ".left", function(){
-		if ( parseInt($("#projects ul").css("left")) < 0 ) {
-			$("#projects ul").animate({left: "+=" + (sliderWidth * 100) + "%"}, 1500);
+	arrowL.click(function() {
+		if ( parseInt(slider.css("left")) < 0 ) {
+			moveSlider("+=");
 		}
 	});
 
 	$(window).resize(function() {
-		$("#projects ul").animate({left: "0"}, 0);
+		slider.animate({left: "0"}, 0);	// so doesn't mess up slider position after resize
 	});
 
 });
