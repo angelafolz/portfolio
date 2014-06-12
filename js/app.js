@@ -22,22 +22,26 @@ $(document).ready(function(){
 
 	$("#projects").on("click", ".right", function(){
 		if ($(window).width() < 640) {
-			sliderWidth = 76.5;
-			sliderNum = sliderWidth * 6;
+			sliderWidth = 0.765;
+			sliderNum = $(window).width() * sliderWidth * 5;
 		} else {
-			sliderWidth = 96;
-			sliderNum = sliderWidth;
+			sliderWidth = 0.96;
+			sliderNum = $(window).width() * sliderWidth;
 		}
 
-		if ( $("#projects ul").css("left") >= "-" + sliderNum + "%" ) {
-			$("#projects ul").animate({left: "-=" + sliderWidth + "%"}, 1500);
+		if ( parseInt($("#projects ul").css("left")) > (-parseInt(sliderNum)) ) {
+			$("#projects ul").animate({left: "-=" + (sliderWidth * 100) + "%"}, 1500);
 		}
 	});
 
 	$("#projects").on("click", ".left", function(){
-		if ( $("#projects ul").css("left") <= "0" ) {
-			$("#projects ul").animate({left: "+=" + sliderWidth + "%"}, 1500);
+		if ( parseInt($("#projects ul").css("left")) < 0 ) {
+			$("#projects ul").animate({left: "+=" + (sliderWidth * 100) + "%"}, 1500);
 		}
+	});
+
+	$(window).resize(function() {
+		$("#projects ul").animate({left: "0"}, 0);
 	});
 
 });
