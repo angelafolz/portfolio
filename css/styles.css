@@ -1,115 +1,326 @@
-html, body {
-	height: 100%;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
+/* HTML5 display-role reset for older browsers */
+/* line 28, ../sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../sass/_reset.scss */
 body {
-	background: url(../images/angela-kauai.jpg) no-repeat center top;
-	background-size: cover;
-	font: normal 20px/24px Arial, Helvetica, sans-serif;
-	color: #6E79D3;
+  line-height: 1;
 }
 
+/* line 34, ../sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, ../sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 5, ../sass/styles.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 9, ../sass/styles.scss */
+body {
+  font: normal 20px/24px Arial, Helvetica, sans-serif;
+  color: #6e79d3;
+}
+
+/* line 14, ../sass/styles.scss */
+.container {
+  min-height: 1000px;
+  background: url(../images/angela-kauai.jpg) no-repeat center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+/* line 24, ../sass/styles.scss */
 a {
-	color: #6E79D3;
-	text-decoration: none;
+  color: #6e79d3;
+  text-decoration: none;
 }
+
+/* line 28, ../sass/styles.scss */
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
-nav, .main {
-	font-weight: bold;
+/* line 32, ../sass/styles.scss */
+.arrow:hover {
+  cursor: pointer;
 }
 
-nav, .main, .projects {
-	background-color: #fff;
-	opacity: 0.7;
+/* line 36, ../sass/styles.scss */
+nav, #main {
+  font-weight: bold;
 }
 
+/* line 40, ../sass/styles.scss */
+nav, #main, #projects {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 44, ../sass/styles.scss */
 nav {
-	height: 50px;
-	width: 100%;
-	line-height: 50px;
-	position: fixed;
-	top: 0;
-	left: 0;
+  display: none;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
-nav > a {
-	margin-left: 20px;
+/* line 54, ../sass/styles.scss */
+nav span {
+  margin-left: 20px;
 }
+/* line 58, ../sass/styles.scss */
 nav ul {
-	float: right;
+  float: right;
 }
-nav ul li {
-	float: left;
-	margin-right: 20px;
+/* line 62, ../sass/styles.scss */
+nav li {
+  float: left;
+  margin-right: 19px;
 }
 
+/* line 68, ../sass/styles.scss */
 h1 {
-	font-size: 50px;
-	line-height: 60px;
-	margin-bottom: 50px;
+  font-size: 2.5em;
+  line-height: 1.2em;
+  margin-bottom: 1em;
 }
 
-.main, .about, .projects {
-	height: 240px;
-	padding: 160px 0;
+/* line 74, ../sass/styles.scss */
+#main, #about {
+  height: 240px;
+  padding: 160px 0;
 }
 
-.main {
-	position: relative;
-	margin-top: 100px;
-}
-.main .title {
-	float: left;
-	margin-left: 20%;
-}
-.main ul {
-	float: right;
-	margin-right: 20%;
-	font-size: 35px;
-	line-height: 40px;
-}
-.main ul li {
-	margin-bottom: 52px;
-}
-.main .arrow {
-	position: absolute;
-	bottom: 90px;
-	right: 20%;
-	margin-right: 68px;
+/* line 79, ../sass/styles.scss */
+.mainShell {
+  height: 560px;
 }
 
-.about p {
-	float: right;
-	margin-top: 80px;
-	margin-right: 20%;
+/* line 83, ../sass/styles.scss */
+#main {
+  position: relative;
+}
+/* line 86, ../sass/styles.scss */
+#main .title {
+  float: left;
+  margin-left: 20%;
+}
+/* line 91, ../sass/styles.scss */
+#main ul {
+  float: right;
+  margin-right: 20%;
+  font-size: 1.75em;
+  line-height: 1.14em;
+}
+/* line 98, ../sass/styles.scss */
+#main li {
+  margin-bottom: 1.5em;
+}
+/* line 102, ../sass/styles.scss */
+#main .arrow {
+  width: 50px;
+  height: 20px;
+  background: url("../images/arrow-down.png") no-repeat 0 0;
+  position: absolute;
+  bottom: 16%;
+  right: 20%;
+  margin-right: 50px;
+}
+/* line 112, ../sass/styles.scss */
+#main .arrow:hover {
+  background-position: 0 -20px;
+  text-decoration: none;
 }
 
-.projects {
-	margin-bottom: 100px;
-	position: relative;
-	height: 420px;
-	padding: 80px 0;
+/* line 119, ../sass/styles.scss */
+#about p {
+  float: right;
+  margin-top: 80px;
+  margin-right: 20%;
 }
-.projects li {
-	display: none;
-	width: 400px;
-	float: left;
-	margin-left: 60px;
-}
-.projects li:nth-child(1), .projects li:nth-child(2), .projects li:nth-child(3) {
-	display: block;
-}
-.projects img {
-	width: 400px;
-	height: 250px;
-	margin-bottom: 10px;
-}
-.projects .arrow {
-	position: absolute;
-	bottom: 50px;
-	left: 50%;
-	margin-left: -15px;
+/* line 124, ../sass/styles.scss */
+#about p a {
+  text-decoration: underline;
 }
 
+/* line 130, ../sass/styles.scss */
+#projects {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+}
+/* line 135, ../sass/styles.scss */
+#projects ul {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 220%;
+}
+/* line 142, ../sass/styles.scss */
+#projects li {
+  width: 12.5%;
+  float: left;
+  margin-left: 2%;
+}
+/* line 148, ../sass/styles.scss */
+#projects img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+/* line 154, ../sass/styles.scss */
+#projects .arrow {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  margin-left: -15px;
+}
+/* line 160, ../sass/styles.scss */
+#projects .arrow span {
+  display: inline-block;
+}
+/* line 165, ../sass/styles.scss */
+#projects .left {
+  width: 20px;
+  height: 50px;
+  background: url("../images/arrow-left.png") no-repeat 0 0;
+}
+/* line 171, ../sass/styles.scss */
+#projects .right {
+  width: 20px;
+  height: 50px;
+  background: url("../images/arrow-right.png") no-repeat 0 0;
+}
+/* line 177, ../sass/styles.scss */
+#projects .left:hover, #projects .right:hover {
+  background-position: -20px 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 184, ../sass/styles.scss */
+  body {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  /* line 189, ../sass/styles.scss */
+  #main, #about {
+    height: 180px;
+    padding: 110px 0;
+  }
+
+  /* line 194, ../sass/styles.scss */
+  #main .arrow {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 200, ../sass/styles.scss */
+  body {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  /* line 205, ../sass/styles.scss */
+  .mainShell {
+    height: 370px;
+  }
+
+  /* line 209, ../sass/styles.scss */
+  #main, #about {
+    height: 140px;
+    padding: 90px 0;
+  }
+
+  /* line 214, ../sass/styles.scss */
+  #main .arrow {
+    margin-right: 19px;
+  }
+
+  /* line 218, ../sass/styles.scss */
+  #projects {
+    padding: 50px 0;
+  }
+}
+@media screen and (max-width: 639px) {
+  /* line 225, ../sass/styles.scss */
+  #main .title {
+    float: none;
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 232, ../sass/styles.scss */
+  #main ul {
+    display: none;
+  }
+  /* line 236, ../sass/styles.scss */
+  #main .arrow {
+    right: 50%;
+    margin-right: -25px;
+  }
+
+  /* line 243, ../sass/styles.scss */
+  #projects ul {
+    width: 500%;
+  }
+  /* line 247, ../sass/styles.scss */
+  #projects li {
+    width: 10.5%;
+    margin-left: 4.8%;
+  }
+}

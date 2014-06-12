@@ -3,73 +3,75 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Angela Folz portfolio</title>
-	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
 <body>
+	<div class="container">
 	<nav>
-		<a href="#">Angela Folz</a>
+		<span>Angela Folz</span>
 		<ul>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Projects</a></li>
-			<li><a href="#">GitHub</a></li>
-			<li><a href="#">LinkedIn</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="https://github.com/angelafolz">GitHub</a></li>
 			<li><a href="#">Contact</a></li>
 		</ul>
 	</nav>
-	<section class="main">
-		<div class="title">
-			<h1>Angela Folz</h1>
-			<h1>Front-end <br>
-				Web Developer</h1>
+		<div class="mainShell">
+			<section id="main">
+					<div class="title">
+						<h1>Angela Folz</h1>
+						<h1>Front-end <br>
+							Web Developer</h1>
+					</div>
+					<ul>
+						<li><a href="#about">About</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+					<a href="#about" class="arrow">&nbsp;</a>
+			</section>
 		</div>
+	<section id="about">
+		<p>That&rsquo;s me. <br>
+		I&rsquo;m a freelance front-end web <br>
+		developer based in the midwest. <br>
+		If you&rsquo;d like to know more about <br>
+		my background, see my <a href="https://dl.dropboxusercontent.com/u/36912103/resume/resume.html">resume</a>.</p>
+	</section>
+	<section id="projects">
 		<ul>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Projects</a></li>
-			<li><a href="#">Contact</a></li>
+			<li>
+				<a href="http://angelafolz.github.io/api-hack/"><img src="images/api-hack.jpg" alt=""></a>
+				<a href="http://angelafolz.github.io/api-hack/"><p>API Hack&mdash;This project uses the Instagram API to compile a group of similar image feeds.</p></a>
+			</li>
+			<li>
+				<a href="http://angelafolz.github.io/quiz-app/"><img src="images/quiz-app.jpg" alt=""></a>
+				<a href="http://angelafolz.github.io/quiz-app/"><p>Quiz App&mdash;A multiple choice quiz demonstrating use of objects in Javascript.</p></a>
+			</li>
+			<li>
+				<a href="https://dl.dropboxusercontent.com/u/36912103/small-business-site/index.html"><img src="images/small-business-site.jpg" alt=""></a>
+				<a href="https://dl.dropboxusercontent.com/u/36912103/small-business-site/index.html"><p>Small Business Site&mdash;A responsive website for a hypothetical small business.</p></a>
+			</li>
+			<li>
+				<a href="http://angelafolz.github.io/shopping-list-app/"><img src="images/shopping-list-app.jpg" alt=""></a>
+				<a href="http://angelafolz.github.io/shopping-list-app/"><p>Shopping List App&mdash;Add, check, star, delete, and rearrage items in a list.</p></a>
+			</li>
+			<li>
+				<a href="http://angelafolz.github.io/hot-or-cold/"><img src="images/hot-or-cold.jpg" alt=""></a>
+				<a href="http://angelafolz.github.io/hot-or-cold/"><p>Hot or Cold&mdash;A number-guessing game (HTML/CSS provided by Thinkful).</p></a>
+			</li>
+			<li>
+				<a href="http://angelafolz.github.io/fizzbuzz/"><img src="images/fizzbuzz.jpg" alt=""></a>
+				<a href="http://angelafolz.github.io/fizzbuzz/"><p>Fizzbuzz&mdash;This simple app counts to a desired number, substituting "fizz" for numbers divisible by 3 and "buzz" for numbers divisible by 5.</p></a>
+			</li>
 		</ul>
 		<div class="arrow">
-			<a href="#">v</a>
+			<span class="left">&nbsp;</span>
+			<span class="right">&nbsp;</span>
 		</div>
 	</section>
-	<section class="about">
-		<p>That’s me. <br>
-		I’m pretty cool. Smart too.<br>
-		If you don’t believe me, <br>
-		see <a href="#">my resume</a>.</p>
-	</section>
-	<section class="projects">
-		<ul>
-			<li>
-				<img src="images/#.jpg" alt="">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, molestias sequi voluptas facere debitis ipsum nemo. Provident, neque asperiores similique quae quia facilis aperiam nam eum doloribus at sint eius.</p>
-			</li>
-			<li>
-				<img src="images/#.jpg" alt="">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, molestias sequi voluptas facere debitis ipsum nemo. Provident, neque asperiores similique quae quia facilis aperiam nam eum doloribus at sint eius.</p>
-			</li>
-			<li>
-				<img src="images/#.jpg" alt="">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, molestias sequi voluptas facere debitis ipsum nemo. Provident, neque asperiores similique quae quia facilis aperiam nam eum doloribus at sint eius.</p>
-			</li>
-			<li>
-				<img src="images/#.jpg" alt="">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, molestias sequi voluptas facere debitis ipsum nemo. Provident, neque asperiores similique quae quia facilis aperiam nam eum doloribus at sint eius.</p>
-			</li>
-			<li>
-				<img src="images/#.jpg" alt="">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, molestias sequi voluptas facere debitis ipsum nemo. Provident, neque asperiores similique quae quia facilis aperiam nam eum doloribus at sint eius.</p>
-			</li>
-			<li>
-				<img src="images/#.jpg" alt="">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, molestias sequi voluptas facere debitis ipsum nemo. Provident, neque asperiores similique quae quia facilis aperiam nam eum doloribus at sint eius.</p>
-			</li>
-		</ul>
-		<div class="arrow">
-			<a href="#">&lt;</a>
-			<a href="#">&gt;</a>
-		</div>
-	</section>
+	</div>
 </body>
 </html>

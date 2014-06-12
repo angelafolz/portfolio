@@ -1,0 +1,253 @@
+@import 'reset';
+
+$primary-color: #6E79D3;
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font: normal 20px/24px Arial, Helvetica, sans-serif;
+	color: $primary-color;
+}
+
+.container {
+	min-height: 1000px;
+	background: url(../images/angela-kauai.jpg) no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 100px 0;
+}
+
+a {
+	color: $primary-color;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+.arrow:hover {
+	cursor: pointer;
+}
+
+nav, #main {
+	font-weight: bold;
+}
+
+nav, #main, #projects {
+	background-color:rgba(255, 255, 255, 0.7);
+}
+
+nav {
+	display: none;
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+
+	span {
+		margin-left: 20px;
+	}
+
+	ul {
+		float: right;
+	}
+	
+	li {
+		float: left;
+		margin-right: 19px;
+	}
+}
+
+h1 {
+	font-size: 2.5em;
+	line-height: 1.2em;
+	margin-bottom: 1em;
+}
+
+#main, #about {
+	height: 240px;
+	padding: 160px 0;
+}
+
+.mainShell {
+	height: 560px;
+}
+
+#main {
+	position: relative;
+
+	.title {
+		float: left;
+		margin-left: 20%;
+	}
+	
+	ul {
+		float: right;
+		margin-right: 20%;
+		font-size: 1.75em;
+		line-height: 1.14em;
+	}
+	
+	li {
+		margin-bottom: 1.5em;
+	}
+	
+	.arrow {
+		width: 50px;
+		height: 20px;
+		background: url("../images/arrow-down.png") no-repeat 0 0;
+		position: absolute;
+		bottom: 16%;
+		right: 20%;
+		margin-right: 50px;
+	}
+
+	.arrow:hover {
+		background-position: 0 -20px;
+		text-decoration: none;
+	}
+}
+
+#about {
+	p {
+		float: right;
+		margin-top: 80px;
+		margin-right: 20%;
+
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+
+#projects {
+	position: relative;
+	padding: 80px 0;
+	overflow: hidden;
+
+	ul {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 220%;
+	}
+
+	li {
+		width: 12.5%;
+		float: left;
+		margin-left: 2%;
+	}
+	
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 10px;
+	}
+	
+	.arrow {
+		position: absolute;
+		bottom: 3%;
+		left: 50%;
+		margin-left: -15px;
+
+		span {
+			display: inline-block;
+		}
+	}
+
+	.left {
+		width: 20px;
+		height: 50px;
+		background: url("../images/arrow-left.png") no-repeat 0 0;
+	}
+
+	.right {
+		width: 20px;
+		height: 50px;
+		background: url("../images/arrow-right.png") no-repeat 0 0;
+	}
+
+	.left:hover, .right:hover {
+		background-position: -20px 0;
+	}
+}
+
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+	body {
+		font-size: 15px;
+		line-height: 18px;
+	}
+
+	#main, #about {
+		height: 180px;
+		padding: 110px 0;
+	}
+
+	#main .arrow {
+		margin-right: 30px;
+	}
+}
+
+@media screen and (max-width:767px) {
+	body {
+		font-size: 12px;
+		line-height: 15px;
+	}
+
+	.mainShell {
+		height: 370px;
+	}
+
+	#main, #about {
+		height: 140px;
+		padding: 90px 0;
+	}
+
+	#main .arrow {
+		margin-right: 19px;
+	}
+
+	#projects {
+		padding: 50px 0;
+	}
+}
+
+@media screen and (max-width:639px) {
+	#main {
+		.title {
+			float: none;
+			width: 230px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		ul {
+			display: none;
+		}
+		
+		.arrow {
+			right: 50%;
+			margin-right: -25px;
+		}
+	}
+
+	#projects {
+		ul {
+			width: 500%;
+		}
+
+		li {
+			width: 10.5%;
+			margin-left: 4.8%;
+		}
+	}
+}
+
